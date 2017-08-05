@@ -7,6 +7,7 @@ var Nav = require('./nav');
 var Home = require('./Home');
 var Battle = require('./Battle');
 var Popular = require('./Popular.js');
+var Result = require('./Result.js');
 
 
 class App extends React.Component{
@@ -19,6 +20,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/battle' component={Battle} />
+            <Route path='/battle/results' component={Result} />
             <Route path='/popular' component={Popular} />
             <Route render={function () {
               return <p>Not found the page</p>
